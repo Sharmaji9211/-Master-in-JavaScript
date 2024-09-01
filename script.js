@@ -377,18 +377,63 @@ function show_User(n1,n2){
   document.write(obj1.fname);
   document.write(obj1.lname);
 }
-show_User("shivam ","sharma");
-show_User("Deepak ","sharma");
-show_User("Rajesh ","sharma");
+//show_User("shivam ","sharma");
+//show_User("Deepak ","sharma");
+//show_User("Rajesh ","sharma");
+
+function branches(){
+const shiv=[{branch:"cse",namee:"briju"},{branch:"Iot",namee:"gullu"},{branch:"Aiml",namee:"balllu"}]
+for(let i=0;i<shiv.length;i++){
+ let obj=shiv[i];
+ document.write(obj.branch)
+ document.write("<br>")
+ document.write(obj.namee)
+}
+}
+//branches();
+function  branches2(){
+  const shiv=[{branch:"cse",namee:"briju"},{branch:"Iot",namee:"gullu"},{branch:"Aiml",namee:"balllu"}]
+   shiv.forEach(j => {
+    document.write(j.branch);
+    document.write("<br>");
+    document.write(j.namee);
+   });
+  }
+ // branches2();
 
 // 2. function expression
+ const My_branch= function branches3(n5){
+   return (n5*n5*n5);
+ };
+ 
 
+//This is callback function.
+const PrintCube=function Cube(){
+document.write(My_branch(10));
+};
 
-
+// PrintCube();
 // 3. arrow function anonymous function
+const My_branchr=(n5)=>{
+  return (n5*n5*n5);
+}
 
+
+//This is callback function.
+const PrintCubee=()=>{
+document.write(My_branch(10));
+};
+
+// PrintCubee();
 
 // 4. immediate function
+// (pass an anonymus function)();
+(()=>{
+  document.write(My_branch(10));
+  })();
+
+
+  
 
 //class object in javascript
 
