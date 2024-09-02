@@ -392,12 +392,13 @@ for(let i=0;i<shiv.length;i++){
 }
 //branches();
 function  branches2(){
-  const shiv=[{branch:"cse",namee:"briju"},{branch:"Iot",namee:"gullu"},{branch:"Aiml",namee:"balllu"}]
-   shiv.forEach(j => {
-    document.write(j.branch);
+  const array=[{branch:"cse",namee:"briju"},{branch:"Iot",namee:"gullu"},{branch:"Aiml",namee:"balllu"}]
+   array.forEach(object=> {
+    document.write(object.branch);
     document.write("<br>");
-    document.write(j.namee);
+    document.write(object.namee);
    });
+
   }
  // branches2();
 
@@ -407,37 +408,165 @@ function  branches2(){
  };
  
 
-//This is callback function.
+
 const PrintCube=function Cube(){
 document.write(My_branch(10));
 };
 
 // PrintCube();
-// 3. arrow function anonymous function
-const My_branchr=(n5)=>{
-  return (n5*n5*n5);
-}
+// 3. arrow function is  anonymous function
+// const My_branchr=(n5)=>{
+//   return (n5*n5*n5);
+// }
 
 
 //This is callback function.
-const PrintCubee=()=>{
-document.write(My_branch(10));
-};
+// const PrintCubee=()=>{
+// document.write(My_branch(10));
+// };
 
 // PrintCubee();
 
 // 4. immediate function
 // (pass an anonymus function)();
-(()=>{
-  document.write(My_branch(10));
-  })();
+// (()=>{
+//   document.write(My_branch(10));
+//   })();
 
 
   
 
-//class object in javascript
+//oops in javascript
+//-------------feature------
+/*
+1. Class(class is a blueprint of objescts or entity) 
+2. Object(Object is a instances or refrence for any class )
+-------------feature of object----
+          1. encapsulation(we binding the data member, method of a class in single unit )
+          2. Abstraction(provide the functionlity,security and hide complexcity )note ** to achieve the abstraction we use setter getter method
+          3. Inheritence(inheritence is a mechanism to create new from old class (parent class ) with existing feature of super class (parent class ))
+          4. Polymorphism(Many bhaviour of same name entity OR may form doing a job EX. All the verbs behave like polymorphism)
+         ADD ON FEATURES  in JS
+          5.Composition ( is a desing principle where a brand class is composed (created) by one or more than one obj from other class ) NOTE OBJECT CAN WE REUSED AND FLEXIBLE DESIGN
+          6.Aggregation (has a relation)NOTE  we create a obj of any class in other class 
+          */
+
+          //CLASS
+          
+          class iot{
+            // data member (variables)
+            a=5;
+            b=5.1100;
+            c='A';
+            d="ss";
+            // constructor
+            constructor(name){
+              this.name=name;
+              console.log(this.a);
+              console.log(this.b);
+              console.log(this.c);
+              console.log(this.d);
+              console.log(name);
+            }
+            // method 
+            fun2(na){
+              console.log("fun2 invoked"+na);
+            }
+           
+          }//encpsulated
+
+// OBJECT 
+ // Myiot=new iot("shivam");//object creation
+// Myiot.fun2(Myiot.name);// member access
 
 
+//Abstration
+class Mylocker{
+      #PAISA;
+      #JEWER;
+      #DOCUMENTS;
+      #IMAGES;
+      setPAISA(RS){
+          this.PAISA=RS;
+      }
+      setJEWER(JW){
+        this.JEWER=JW;
+    }
+  
+    setDOCUMENTS(DC){
+      this.DOCUMENTS=DC;
+  }
+
+  setIMAGES(IM){
+    this.IMAGES=IM;
+}
+
+getPAISA(){
+  return this.PAISA;
+}
+getJEWER(){
+return this.JEWER;
+}
+
+getDOCUMENTS(){
+return this.DOCUMENTS;
+}
+
+getIMAGES(){
+return this.IMAGES;
+}
+}
+  lokersbi =new Mylocker()
+  //document.write(lokersbi.PAISA);
+  lokersbi.setPAISA(1000);
+  lokersbi.setJEWER("CHAIN");
+  lokersbi.setDOCUMENTS("10TH");
+  lokersbi.setIMAGES("BHABHI");
+ const rss= lokersbi.getPAISA();
+ const jwers= lokersbi.getJEWER();
+ const docu= lokersbi.getDOCUMENTS();
+ const img= lokersbi.getIMAGES();
+ document.write(
+  `<style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container ul{
+            background-color: rgb(218, 212, 223);
+            width: 250px;
+            padding: 20px;
+            border: 2px dotted black;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 5px; 
+            box-shadow: 10px 10px 2px 1px rgba(64, 66, 63, 0.226);
+
+        }
+        h1{
+            background-color: yellowgreen;
+            width: 290px;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Locker</h1>
+        <ul class="locker">
+            
+            <li>PAISA==${rss}</li>
+            <li>JEWER==${jwers}</li>
+            <li>DOCUMENTS==${docu}</li>
+            <li>IMAGES==${img}</li>
+        </ul>
+    </div>
+</body>
+</html>`
+ )
 //Dom manupulation
 
 //2. Advanced Asynchronus javascript:
