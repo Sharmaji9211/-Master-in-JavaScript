@@ -482,7 +482,7 @@ document.write(My_branch(10));
 
 //Abstration
 class Mylocker{
-      #PAISA;
+      #_PAISA;
       #JEWER;
       #DOCUMENTS;
       #IMAGES;
@@ -516,6 +516,7 @@ getIMAGES(){
 return this.IMAGES;
 }
 }
+const openlocker=()=>{
   lokersbi =new Mylocker()
   //document.write(lokersbi.PAISA);
   lokersbi.setPAISA(1000);
@@ -532,6 +533,7 @@ return this.IMAGES;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top:100px;
         }
         .container ul{
             background-color: rgb(218, 212, 223);
@@ -567,6 +569,91 @@ return this.IMAGES;
 </body>
 </html>`
  )
+}
+ const password=parseInt(prompt("Enter your password"));
+
+ if(password===12345){
+  openlocker();
+ }
+ else{
+  alert("Incorrect Password");
+ }
+
+
+//-----------Inheritence---------
+class Adv_locker extends Mylocker{
+  #iphone
+  #video
+  #casefile
+
+  setData(mini,vid,file){
+    this.iphone=mini;
+    this.video=vid;
+    this.casefile=file;
+  }
+  getData(){
+   return ("<br>Iphone=="+this.iphone+"<br>My Video=="+this.video+"<br>Case file=="+this.casefile);
+  }
+
+}
+const openAdv_locker= ()=>{
+  const lockerpnb= new Adv_locker();
+  const rsss= lockerpnb.getPAISA();
+   const jwerss= lockerpnb.getJEWER();
+   const docuu= lockerpnb.getDOCUMENTS();
+   const imgg= lockerpnb.getIMAGES();
+   lockerpnb.setData(15,"myvideo","casefile");
+   const Avd_lockerdata=lockerpnb.getData();
+   document.write(
+    `<style>
+          body{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top:100px;
+          }
+          .container ul{
+              background-color: rgb(218, 212, 223);
+              width: 250px;
+              padding: 20px;
+              border: 2px dotted black;
+              list-style: none;
+              display: flex;
+              flex-direction: column;
+              gap: 5px; 
+              box-shadow: 10px 10px 2px 1px rgba(64, 66, 63, 0.226);
+          }
+          h1{
+              background-color: yellowgreen;
+              width: 290px;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container">
+          <h1>Advance Locker</h1>
+          <ul class="locker">
+              
+              <li>PAISA==${rsss}</li>
+              <li>JEWER==${jwerss}</li>
+              <li>DOCUMENTS==${docuu}</li>
+              <li>IMAGES==${imgg}</li>
+              <li>Adv_locker_Data<hr><br>${Avd_lockerdata}</li>
+          </ul>
+      </div>
+  </body>
+  </html>`
+   )
+ }
+
+ const pass=parseInt(prompt("Enter your advance locker password"));
+ if(pass===123456){
+  openAdv_locker();
+  console.log("success login")
+ }else{
+  alert("Wrong password");
+ }
+
 //Dom manupulation
 
 //2. Advanced Asynchronus javascript:
