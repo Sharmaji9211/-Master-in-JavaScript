@@ -445,7 +445,7 @@ document.write(My_branch(10));
           1. encapsulation(we binding the data member, method of a class in single unit )
           2. Abstraction(provide the functionlity,security and hide complexcity )note ** to achieve the abstraction we use setter getter method
           3. Inheritence(inheritence is a mechanism to create new from old class (parent class ) with existing feature of super class (parent class ))
-          4. Polymorphism(Many bhaviour of same name entity OR may form doing a job EX. All the verbs behave like polymorphism)
+          4. Polymorphism(Many bhaviour of same name entity OR many form doing a job EX. All the verbs behave like polymorphism)
          ADD ON FEATURES  in JS
           5.Composition ( is a desing principle where a brand class is composed (created) by one or more than one obj from other class ) NOTE OBJECT CAN WE REUSED AND FLEXIBLE DESIGN
           6.Aggregation (has a relation)NOTE  we create a obj of any class in other class 
@@ -481,180 +481,309 @@ document.write(My_branch(10));
 
 
 //Abstration
-class Mylocker{
-      #_PAISA;
-      #JEWER;
-      #DOCUMENTS;
-      #IMAGES;
-      setPAISA(RS){
-          this.PAISA=RS;
-      }
-      setJEWER(JW){
-        this.JEWER=JW;
-    }
+// class Mylocker{
+//       #_PAISA;
+//       #JEWER;
+//       #DOCUMENTS;
+//       #IMAGES;
+//       setPAISA(RS){
+//           this.PAISA=RS;
+//       }
+//       setJEWER(JW){
+//         this.JEWER=JW;
+//     }
   
-    setDOCUMENTS(DC){
-      this.DOCUMENTS=DC;
-  }
+//     setDOCUMENTS(DC){
+//       this.DOCUMENTS=DC;
+//   }
 
-  setIMAGES(IM){
-    this.IMAGES=IM;
-}
+//   setIMAGES(IM){
+//     this.IMAGES=IM;
+// }
 
-getPAISA(){
-  return this.PAISA;
-}
-getJEWER(){
-return this.JEWER;
-}
+// getPAISA(){
+//   return this.PAISA;
+// }
+// getJEWER(){
+// return this.JEWER;
+// }
 
-getDOCUMENTS(){
-return this.DOCUMENTS;
-}
+// getDOCUMENTS(){
+// return this.DOCUMENTS;
+// }
 
-getIMAGES(){
-return this.IMAGES;
-}
-}
-const openlocker=()=>{
-  lokersbi =new Mylocker()
-  //document.write(lokersbi.PAISA);
-  lokersbi.setPAISA(1000);
-  lokersbi.setJEWER("CHAIN");
-  lokersbi.setDOCUMENTS("10TH");
-  lokersbi.setIMAGES("BHABHI");
- const rss= lokersbi.getPAISA();
- const jwers= lokersbi.getJEWER();
- const docu= lokersbi.getDOCUMENTS();
- const img= lokersbi.getIMAGES();
- document.write(
-  `<style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top:100px;
-        }
-        .container ul{
-            background-color: rgb(218, 212, 223);
-            width: 250px;
-            padding: 20px;
-            border: 2px dotted black;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 5px; 
-            box-shadow: 10px 10px 2px 1px rgba(64, 66, 63, 0.226);
+// getIMAGES(){
+// return this.IMAGES;
+// }
+// }
+// const openlocker=()=>{
+//   lokersbi =new Mylocker()
+//   //document.write(lokersbi.PAISA);
+//   lokersbi.setPAISA(1000);
+//   lokersbi.setJEWER("CHAIN");
+//   lokersbi.setDOCUMENTS("10TH");
+//   lokersbi.setIMAGES("BHABHI");
+//  const rss= lokersbi.getPAISA();
+//  const jwers= lokersbi.getJEWER();
+//  const docu= lokersbi.getDOCUMENTS();
+//  const img= lokersbi.getIMAGES();
+//  document.write(
+//   `<style>
+//         body{
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             margin-top:100px;
+//         }
+//         .container ul{
+//             background-color: rgb(218, 212, 223);
+//             width: 250px;
+//             padding: 20px;
+//             border: 2px dotted black;
+//             list-style: none;
+//             display: flex;
+//             flex-direction: column;
+//             gap: 5px; 
+//             box-shadow: 10px 10px 2px 1px rgba(64, 66, 63, 0.226);
 
-        }
-        h1{
-            background-color: yellowgreen;
-            width: 290px;
+//         }
+//         h1{
+//             background-color: yellowgreen;
+//             width: 290px;
             
-        }
+//         }
        
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Locker</h1>
-        <ul class="locker">
+//     </style>
+// </head>
+// <body>
+//     <div class="container">
+//         <h1>Locker</h1>
+//         <ul class="locker">
             
-            <li>PAISA==${rss}</li>
-            <li>JEWER==${jwers}</li>
-            <li>DOCUMENTS==${docu}</li>
-            <li>IMAGES==${img}</li>
-        </ul>
-    </div>
-</body>
-</html>`
- )
-}
- const password=parseInt(prompt("Enter your password"));
+//             <li>PAISA==${rss}</li>
+//             <li>JEWER==${jwers}</li>
+//             <li>DOCUMENTS==${docu}</li>
+//             <li>IMAGES==${img}</li>
+//         </ul>
+//     </div>
+// </body>
+// </html>`
+//  )
+// }
+//  const password=parseInt(prompt("Enter your password"));
 
- if(password===12345){
-  openlocker();
- }
- else{
-  alert("Incorrect Password");
- }
+//  if(password===12345){
+//   openlocker();
+//  }
+//  else{
+//   alert("Incorrect Password");
+//  }
 
 
 //-----------Inheritence---------
-class Adv_locker extends Mylocker{
-  #iphone
-  #video
-  #casefile
+// class Adv_locker extends Mylocker{
+//   #iphone
+//   #video
+//   #casefile
 
-  setData(mini,vid,file){
-    this.iphone=mini;
-    this.video=vid;
-    this.casefile=file;
-  }
-  getData(){
-   return ("<br>Iphone=="+this.iphone+"<br>My Video=="+this.video+"<br>Case file=="+this.casefile);
-  }
+//   setData(mini,vid,file){
+//     this.iphone=mini;
+//     this.video=vid;
+//     this.casefile=file;
+//   }
+//   getData(){
+//    return ("<br>Iphone=="+this.iphone+"<br>My Video=="+this.video+"<br>Case file=="+this.casefile);
+//   }
 
-}
-const openAdv_locker= ()=>{
-  const lockerpnb= new Adv_locker();
-  const rsss= lockerpnb.getPAISA();
-   const jwerss= lockerpnb.getJEWER();
-   const docuu= lockerpnb.getDOCUMENTS();
-   const imgg= lockerpnb.getIMAGES();
-   lockerpnb.setData(15,"myvideo","casefile");
-   const Avd_lockerdata=lockerpnb.getData();
-   document.write(
-    `<style>
-          body{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin-top:100px;
-          }
-          .container ul{
-              background-color: rgb(218, 212, 223);
-              width: 250px;
-              padding: 20px;
-              border: 2px dotted black;
-              list-style: none;
-              display: flex;
-              flex-direction: column;
-              gap: 5px; 
-              box-shadow: 10px 10px 2px 1px rgba(64, 66, 63, 0.226);
-          }
-          h1{
-              background-color: yellowgreen;
-              width: 290px;
-          }
-      </style>
-  </head>
-  <body>
-      <div class="container">
-          <h1>Advance Locker</h1>
-          <ul class="locker">
+// }
+// const openAdv_locker= ()=>{
+//   const lockerpnb= new Adv_locker();
+//   const rsss= lockerpnb.getPAISA();
+//    const jwerss= lockerpnb.getJEWER();
+//    const docuu= lockerpnb.getDOCUMENTS();
+//    const imgg= lockerpnb.getIMAGES();
+//    lockerpnb.setData(15,"myvideo","casefile");
+//    const Avd_lockerdata=lockerpnb.getData();
+//    document.write(
+//     `<style>
+//           body{
+//               display: flex;
+//               justify-content: center;
+//               align-items: center;
+//               margin-top:100px;
+//           }
+//           .container ul{
+//               background-color: rgb(218, 212, 223);
+//               width: 250px;
+//               padding: 20px;
+//               border: 2px dotted black;
+//               list-style: none;
+//               display: flex;
+//               flex-direction: column;
+//               gap: 5px; 
+//               box-shadow: 10px 10px 2px 1px rgba(64, 66, 63, 0.226);
+//           }
+//           h1{
+//               background-color: yellowgreen;
+//               width: 290px;
+//           }
+//       </style>
+//   </head>
+//   <body>
+//       <div class="container">
+//           <h1>Advance Locker</h1>
+//           <ul class="locker">
               
-              <li>PAISA==${rsss}</li>
-              <li>JEWER==${jwerss}</li>
-              <li>DOCUMENTS==${docuu}</li>
-              <li>IMAGES==${imgg}</li>
-              <li>Adv_locker_Data<hr><br>${Avd_lockerdata}</li>
-          </ul>
-      </div>
-  </body>
-  </html>`
-   )
- }
+//               <li>PAISA==${rsss}</li>
+//               <li>JEWER==${jwerss}</li>
+//               <li>DOCUMENTS==${docuu}</li>
+//               <li>IMAGES==${imgg}</li>
+//               <li>Adv_locker_Data<hr><br>${Avd_lockerdata}</li>
+//           </ul>
+//       </div>
+//   </body>
+//   </html>`
+//    )
+//  }
 
- const pass=parseInt(prompt("Enter your advance locker password"));
- if(pass===123456){
-  openAdv_locker();
-  console.log("success login")
- }else{
-  alert("Wrong password");
- }
+//  const pass=parseInt(prompt("Enter your advance locker password"));
+//  if(pass===123456){
+//   openAdv_locker();
+//   console.log("success login")
+//  }else{
+//   alert("Wrong password");
+//  }
 
-//Dom manupulation
+
+
+//------------Polymorphism---------
+//overloading
+// class Automatic_on_off_system{
+//      //light*4
+//      //fan*2
+//      //cooler*1
+//      //exhuast fan*1
+
+//      //method overloading using spread operator
+//      Light(...agrs){
+//       if(agrs.length==1){
+//           document.write("light1 is open<br>");
+//       }
+//       else if(agrs.length==2){
+//         document.write("light2 from right is open<br>");
+//       }
+//       else if(agrs.length==4){
+//         document.write("light3 from right is open<br>");
+//       }
+//       else if(agrs.length==3){
+//         document.write("light4 from middle is open<br>");
+//      }
+//     }
+//     fan(...agrs){
+//       if(agrs.length==1){
+//           document.write(`fan1 is open: <img width="30px" height="30px " style="border-radius:100%" src="./pic.jpg" <br>`);
+//       }
+//       else if(agrs.length==2){
+//         document.write("<br>fan2 from right is open<br>");
+//       }
+//     }
+//     //overloading with same number of parameter with different type parameter and same name method
+//     cooler(param1,param2){
+     
+//       if(typeof param1=="number" && param2=="String"){
+//         document.write("cooler is open<br>");
+//     }
+//   }
+//     exhaust_fan(param){
+
+//       if(typeof param=="object")
+//       document.write(" exhaust_fan is open"+param.name);
+//       else
+//       document.write("Invalid parameter");
+//     }
+//   }
+
+//  const AOS=new Automatic_on_off_system();
+//  AOS.Light(1);
+//  AOS.Light(2,"RIGHT");
+//  AOS.Light(3,5.11,"right",22);
+//  AOS.Light(4,"LEFT","RIGHT");
+//  AOS.fan(1);
+//  AOS.fan(2,"FAN2");
+//  AOS.cooler(20,"myPara");
+//  AOS.exhaust_fan({name:"Brijesh"});
+
+
+//runtime polymorphism
+
+
+class Btech{
+  add(a,b){
+    let y=a*b;//**OLD LOGIC */
+    document.write(y);
+  }
+}
+class CSE extends Btech{
+    add(c,d){
+      let x=c-d;//**NEW  LOGIC */
+      document.write(x);
+    }
+}
+class IOT extends Btech{
+  add(c,d){
+    let x=c+d;//**NEW  LOGIC */
+    document.write(x);
+  }
+}
+// const Mycourse=new IOT();
+// Mycourse.add(7,9);
+// Mycourse.add(5,8);
+
+ 
+class Manager{
+   Website(){
+      throw new Error("Website must be implement and override create updated website");
+   }
+}
+
+class devloper1 extends Manager {
+  Website(){
+    document.write("derveloper 1 create website with updated feature in 2016");
+
+  }
+}
+
+class devloper2 extends Manager {
+  Website(){
+    document.write("derveloper 2 create website with updated feature in 2020");
+
+  }
+}
+
+class devloper3 extends Manager {
+  Website(){
+    document.write("derveloper 3 create website with updated feature in 2024");
+
+  }
+}
+
+const  webApp=new  devloper3 ();
+webApp.Website();
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //2. Advanced Asynchronus javascript:
 
