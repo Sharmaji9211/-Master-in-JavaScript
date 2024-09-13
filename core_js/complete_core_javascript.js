@@ -343,98 +343,180 @@ for (let index = 0; index < arrayList.length; index++) {
   
 }
 }
-//fun();
-// function in javascript
 
-// 1. normal function
+//Iterations in js
 
-function fun1(){
-  document.write("function 1 envoked ")
-}
-//fun1();
-function even(n){
-  var c1=0,c2=0;
-  for(let i=0;i<n;i++){
-    if(i%2==0){
-      document.write(`${i}: even<br>`);
-      c1++;
-     }
-     else{
-      document.write(`${i}: odd<br>`);
-      c2++;
-     }
+// Function to iterate over an array and print each object's branch and name using a for loop
+function branches() {
+  const shiv = [
+      { branch: "cse", namee: "briju" },
+      { branch: "Iot", namee: "gullu" },
+      { branch: "Aiml", namee: "balllu" }
+  ];
+
+  // Looping through the array using a traditional for loop
+  for (let i = 0; i < shiv.length; i++) {
+      let obj = shiv[i]; // Get each object from the array
+      document.write(obj.branch); // Print branch
+      document.write("<br>"); // Add line break
+      document.write(obj.namee); // Print name
+      document.write("<br>"); // Add another line break
   }
-  document.write("even num "+c1);
-  document.write("odd num"+c2);
 }
 
-//even(50);
+// Function to iterate using forEach and print each object's branch and name
+function branches2() {
+  const array = [
+      { branch: "cse", namee: "briju" },
+      { branch: "Iot", namee: "gullu" },
+      { branch: "Aiml", namee: "balllu" }
+  ];
 
-
-function show_User(n1,n2){
-  const obj1={fname: n1 ,lname: n2}
-
-  document.write(obj1.fname);
-  document.write(obj1.lname);
+  // Using forEach to iterate through the array
+  array.forEach(object => {
+      document.write(object.branch); // Print branch
+      document.write("<br>"); // Add line break
+      document.write(object.namee); // Print name
+      document.write("<br>"); // Add another line break
+  });
 }
-//show_User("shivam ","sharma");
-//show_User("Deepak ","sharma");
-//show_User("Rajesh ","sharma");
 
-function branches(){
-const shiv=[{branch:"cse",namee:"briju"},{branch:"Iot",namee:"gullu"},{branch:"Aiml",namee:"balllu"}]
-for(let i=0;i<shiv.length;i++){
- let obj=shiv[i];
- document.write(obj.branch)
- document.write("<br>")
- document.write(obj.namee)
-}
-}
-//branches();
-function  branches2(){
-  const array=[{branch:"cse",namee:"briju"},{branch:"Iot",namee:"gullu"},{branch:"Aiml",namee:"balllu"}]
-   array.forEach(object=> {
-    document.write(object.branch);
-    document.write("<br>");
-    document.write(object.namee);
-   });
+// Function to use map and return an object when a condition is met
+function branches3() {
+  const array = [
+      { branch: "cse", namee: "briju" },
+      { branch: "Iot", namee: "gullu" },
+      { branch: "Aiml", namee: "briju" }
+  ];
 
+  // Using map to iterate and return the object where the name is "briju"
+  const response = array.map(object => {
+      if (object.namee === "briju") return object; // Return object if name is "briju"
+  });
+
+  console.log(response); // Logs an array with undefined for non-matching objects
+}
+
+// Function to use filter and return objects based on a condition (id >= 2)
+function branches4() {
+  const array = [
+      { branch: "cse", namee: "briju", id: "1" },
+      { branch: "Iot", namee: "gullu", id: "2" },
+      { branch: "Aiml", namee: "briju", id: "3" }
+  ];
+
+  // Using filter to return objects with id >= 2
+  const response = array.filter(object => object.id >= 2);
+
+  console.log(response); // Logs array with objects that match the condition
+}
+
+// Function to calculate the sum of fees using reduce
+function branches5() {
+  const array = [
+      { branch: "cse", namee: "briju", fee: 1 },
+      { branch: "Iot", namee: "gullu", fee: 2 },
+      { branch: "Aiml", namee: "briju", fee: 3 }
+  ];
+
+  // Using reduce to sum up the fees
+  const feeSum = array.reduce((accumulator, object) => {
+      return accumulator + object.fee; // Add the fee of each object to the accumulator
+  }, 0); // Initial value of accumulator is 0
+
+  console.log(feeSum); // Logs the total fee
+}
+
+
+// JavaScript Functions
+
+// 1. Normal function (Function Declaration)
+// This function will print a message to the document when called.
+function fun1() {
+  document.write("function 1 invoked <br>");
+}
+// Example usage: fun1();
+
+// Function to print whether a number is even or odd for all numbers less than 'n'
+function even(n) {
+  var c1 = 0, c2 = 0; // Counters for even and odd numbers
+  for (let i = 0; i < n; i++) {
+    if (i % 2 == 0) { // Check if the number is even
+      document.write(`${i}: even<br>`); // Print even number
+      c1++; // Increment even counter
+    } else {
+      document.write(`${i}: odd<br>`); // Print odd number
+      c2++; // Increment odd counter
+    }
   }
- // branches2();
+  document.write("Even numbers: " + c1 + "<br>"); // Print total even numbers
+  document.write("Odd numbers: " + c2 + "<br>");  // Print total odd numbers
+}
 
-// 2. function expression
- const My_branch= function branches3(n5){
-   return (n5*n5*n5);
- };
- 
+// Example usage: even(50);
+
+// Function to display a user's first and last name
+function show_User(n1, n2) {
+  const obj1 = { fname: n1, lname: n2 }; // Create an object with first and last name
+  document.write("First name: " + obj1.fname + "<br>"); // Print first name
+  document.write("Last name: " + obj1.lname + "<br>");  // Print last name
+}
+
+// Example usage:
+// show_User("Shivam", "Sharma");
+// show_User("Deepak", "Sharma");
+// show_User("Rajesh", "Sharma");
 
 
-const PrintCube=function Cube(){
-document.write(My_branch(10));
+// 2. Function Expression
+// This function expression calculates the cube of a number
+const My_branch = function branches3(n5) {
+  return n5 * n5 * n5; // Cube of the number
 };
 
-// PrintCube();
-// 3. arrow function is  anonymous function
-// const My_branchr=(n5)=>{
-//   return (n5*n5*n5);
-// }
+// This function uses the My_branch function to calculate and print the cube of 10
+const PrintCube = function Cube() {
+  document.write("Cube: " + My_branch(10) + "<br>");
+};
+
+// Example usage: PrintCube();
 
 
-//This is callback function.
-// const PrintCubee=()=>{
-// document.write(My_branch(10));
-// };
+// 3. Arrow function (Anonymous function)
+// Arrow functions are a more concise way to write function expressions
+// This arrow function calculates the cube of a number
+const My_branchr = (n5) => {
+  return n5 * n5 * n5;
+};
 
-// PrintCubee();
+// Example usage: document.write(My_branchr(10));
 
-// 4. immediate function
-// (pass an anonymus function)();
-// (()=>{
-//   document.write(My_branch(10));
-//   })();
+// 4. Callback function
+// A callback function is a function passed as an argument to another function.
+// This example shows a callback in action where My_branch is used as a callback.
+// Define a function that accepts a callback function
+function greetUser(name, callback) {
+  document.write("Hello " + name + "<br>"); // Greet the user
+  callback(); // Call the callback function
+}
+
+// Callback function
+function askHowAreYou() {
+  document.write("How are you today?<br>"); // Additional question
+}
+
+// Call greetUser and pass askHowAreYou as a callback
+greetUser("Shivam", askHowAreYou);
 
 
-  
+// Example usage: PrintCubee();
+
+// 5. Immediate function (IIFE - Immediately Invoked Function Expression)
+// This function is invoked immediately after it's defined without needing to call it separately.
+(() => {
+  document.write("Cube in IIFE: " + My_branch(10) + "<br>");
+})();
+
 
 //oops in javascript
 //-------------feature------
@@ -481,178 +563,179 @@ document.write(My_branch(10));
 
 
 //Abstration
-// class Mylocker{
-//       #_PAISA;
-//       #JEWER;
-//       #DOCUMENTS;
-//       #IMAGES;
-//       setPAISA(RS){
-//           this.PAISA=RS;
-//       }
-//       setJEWER(JW){
-//         this.JEWER=JW;
-//     }
+class Mylocker{
+      #_PAISA;
+      #JEWER;
+      #DOCUMENTS;
+      #IMAGES;
+      setPAISA(RS){
+          this.PAISA=RS;
+      }
+      setJEWER(JW){
+        this.JEWER=JW;
+    }
   
-//     setDOCUMENTS(DC){
-//       this.DOCUMENTS=DC;
-//   }
+    setDOCUMENTS(DC){
+      this.DOCUMENTS=DC;
+  }
 
-//   setIMAGES(IM){
-//     this.IMAGES=IM;
-// }
+  setIMAGES(IM){
+    this.IMAGES=IM;
+}
 
-// getPAISA(){
-//   return this.PAISA;
-// }
-// getJEWER(){
-// return this.JEWER;
-// }
+getPAISA(){
+  return this.PAISA;
+}
+getJEWER(){
+return this.JEWER;
+}
 
-// getDOCUMENTS(){
-// return this.DOCUMENTS;
-// }
+getDOCUMENTS(){
+return this.DOCUMENTS;
+}
 
-// getIMAGES(){
-// return this.IMAGES;
-// }
-// }
-// const openlocker=()=>{
-//   lokersbi =new Mylocker()
-//   //document.write(lokersbi.PAISA);
-//   lokersbi.setPAISA(1000);
-//   lokersbi.setJEWER("CHAIN");
-//   lokersbi.setDOCUMENTS("10TH");
-//   lokersbi.setIMAGES("BHABHI");
-//  const rss= lokersbi.getPAISA();
-//  const jwers= lokersbi.getJEWER();
-//  const docu= lokersbi.getDOCUMENTS();
-//  const img= lokersbi.getIMAGES();
-//  document.write(
-//   `<style>
-//         body{
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-//             margin-top:100px;
-//         }
-//         .container ul{
-//             background-color: rgb(218, 212, 223);
-//             width: 250px;
-//             padding: 20px;
-//             border: 2px dotted black;
-//             list-style: none;
-//             display: flex;
-//             flex-direction: column;
-//             gap: 5px; 
-//             box-shadow: 10px 10px 2px 1px rgba(64, 66, 63, 0.226);
+getIMAGES(){
+return this.IMAGES;
+}
+}
+const openlocker=()=>{
+  lokersbi =new Mylocker()
+  //document.write(lokersbi.PAISA);
+  lokersbi.setPAISA(1000);
+  lokersbi.setJEWER("CHAIN");
+  lokersbi.setDOCUMENTS("10TH");
+  lokersbi.setIMAGES("BHABHI");
+ const rss= lokersbi.getPAISA();
+ const jwers= lokersbi.getJEWER();
+ const docu= lokersbi.getDOCUMENTS();
+ const img= lokersbi.getIMAGES();
+ document.write(
+  `<style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:100px;
+        }
+        .container ul{
+            background-color: rgb(218, 212, 223);
+            width: 250px;
+            padding: 20px;
+            border: 2px dotted black;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 5px; 
+            box-shadow: 10px 10px 2px 1px rgba(64, 66, 63, 0.226);
 
-//         }
-//         h1{
-//             background-color: yellowgreen;
-//             width: 290px;
+        }
+        h1{
+            background-color: yellowgreen;
+            width: 290px;
             
-//         }
+        }
        
-//     </style>
-// </head>
-// <body>
-//     <div class="container">
-//         <h1>Locker</h1>
-//         <ul class="locker">
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Locker</h1>
+        <ul class="locker">
             
-//             <li>PAISA==${rss}</li>
-//             <li>JEWER==${jwers}</li>
-//             <li>DOCUMENTS==${docu}</li>
-//             <li>IMAGES==${img}</li>
-//         </ul>
-//     </div>
-// </body>
-// </html>`
-//  )
-// }
-//  const password=parseInt(prompt("Enter your password"));
+            <li>PAISA==${rss}</li>
+            <li>JEWER==${jwers}</li>
+            <li>DOCUMENTS==${docu}</li>
+            <li>IMAGES==${img}</li>
+        </ul>
+    </div>
+</body>
+</html>`
+ )
+}
+ const password=parseInt(prompt("Enter your password"));
 
-//  if(password===12345){
-//   openlocker();
-//  }
-//  else{
-//   alert("Incorrect Password");
-//  }
+ if(password===12345){
+  openlocker();
+ }
+ else{
+  alert("Incorrect Password");
+ }
 
 
-//-----------Inheritence---------
-// class Adv_locker extends Mylocker{
-//   #iphone
-//   #video
-//   #casefile
+// -----------Inheritence---------
 
-//   setData(mini,vid,file){
-//     this.iphone=mini;
-//     this.video=vid;
-//     this.casefile=file;
-//   }
-//   getData(){
-//    return ("<br>Iphone=="+this.iphone+"<br>My Video=="+this.video+"<br>Case file=="+this.casefile);
-//   }
+class Adv_locker extends Mylocker{
+  #iphone
+  #video
+  #casefile
 
-// }
-// const openAdv_locker= ()=>{
-//   const lockerpnb= new Adv_locker();
-//   const rsss= lockerpnb.getPAISA();
-//    const jwerss= lockerpnb.getJEWER();
-//    const docuu= lockerpnb.getDOCUMENTS();
-//    const imgg= lockerpnb.getIMAGES();
-//    lockerpnb.setData(15,"myvideo","casefile");
-//    const Avd_lockerdata=lockerpnb.getData();
-//    document.write(
-//     `<style>
-//           body{
-//               display: flex;
-//               justify-content: center;
-//               align-items: center;
-//               margin-top:100px;
-//           }
-//           .container ul{
-//               background-color: rgb(218, 212, 223);
-//               width: 250px;
-//               padding: 20px;
-//               border: 2px dotted black;
-//               list-style: none;
-//               display: flex;
-//               flex-direction: column;
-//               gap: 5px; 
-//               box-shadow: 10px 10px 2px 1px rgba(64, 66, 63, 0.226);
-//           }
-//           h1{
-//               background-color: yellowgreen;
-//               width: 290px;
-//           }
-//       </style>
-//   </head>
-//   <body>
-//       <div class="container">
-//           <h1>Advance Locker</h1>
-//           <ul class="locker">
+  setData(mini,vid,file){
+    this.iphone=mini;
+    this.video=vid;
+    this.casefile=file;
+  }
+  getData(){
+   return ("<br>Iphone=="+this.iphone+"<br>My Video=="+this.video+"<br>Case file=="+this.casefile);
+  }
+
+}
+const openAdv_locker= ()=>{
+  const lockerpnb= new Adv_locker();
+  const rsss= lockerpnb.getPAISA();
+   const jwerss= lockerpnb.getJEWER();
+   const docuu= lockerpnb.getDOCUMENTS();
+   const imgg= lockerpnb.getIMAGES();
+   lockerpnb.setData(15,"myvideo","casefile");
+   const Avd_lockerdata=lockerpnb.getData();
+   document.write(
+    `<style>
+          body{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top:100px;
+          }
+          .container ul{
+              background-color: rgb(218, 212, 223);
+              width: 250px;
+              padding: 20px;
+              border: 2px dotted black;
+              list-style: none;
+              display: flex;
+              flex-direction: column;
+              gap: 5px; 
+              box-shadow: 10px 10px 2px 1px rgba(64, 66, 63, 0.226);
+          }
+          h1{
+              background-color: yellowgreen;
+              width: 290px;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container">
+          <h1>Advance Locker</h1>
+          <ul class="locker">
               
-//               <li>PAISA==${rsss}</li>
-//               <li>JEWER==${jwerss}</li>
-//               <li>DOCUMENTS==${docuu}</li>
-//               <li>IMAGES==${imgg}</li>
-//               <li>Adv_locker_Data<hr><br>${Avd_lockerdata}</li>
-//           </ul>
-//       </div>
-//   </body>
-//   </html>`
-//    )
-//  }
+              <li>PAISA==${rsss}</li>
+              <li>JEWER==${jwerss}</li>
+              <li>DOCUMENTS==${docuu}</li>
+              <li>IMAGES==${imgg}</li>
+              <li>Adv_locker_Data<hr><br>${Avd_lockerdata}</li>
+          </ul>
+      </div>
+  </body>
+  </html>`
+   )
+ }
 
-//  const pass=parseInt(prompt("Enter your advance locker password"));
-//  if(pass===123456){
-//   openAdv_locker();
-//   console.log("success login")
-//  }else{
-//   alert("Wrong password");
-//  }
+ const pass=parseInt(prompt("Enter your advance locker password"));
+ if(pass===123456){
+  openAdv_locker();
+  console.log("success login")
+ }else{
+  alert("Wrong password");
+ }
 
 
 

@@ -1,0 +1,45 @@
+{
+    "status": "ok",
+    "totalResults": 3,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "GNIOT Times"
+            },
+            "author": "John Doe",
+            "title": "GNIOT is the best college in Greater Noida",
+            "description": "GNIOT has been ranked as the top institution in Greater Noida for its academic excellence and state-of-the-art infrastructure.",
+            "url": "https://www.gniottimes.com/best-college-greater-noida",
+            "urlToImage": "https://www.gniottimes.com/images/gniot-campus.jpg",
+            "publishedAt": "2024-09-12T10:00:00Z",
+            "content": "GNIOT (Greater Noida Institute of Technology) continues to excel in providing quality education. It has been recognized for its outstanding academic performance, campus facilities, and placement record..."
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Education Today"
+            },
+            "author": "Jane Smith",
+            "title": "Top 5 Colleges in Greater Noida for 2024",
+            "description": "A list of the top 5 colleges in Greater Noida for the year 2024 based on student satisfaction and academic performance.",
+            "url": "https://www.educationtoday.com/top-5-colleges-2024",
+            "urlToImage": "https://www.educationtoday.com/images/top-colleges-2024.jpg",
+            "publishedAt": "2024-09-11T09:00:00Z",
+            "content": "This year's rankings of the best colleges in Greater Noida have placed GNIOT, Galgotias University, and Sharda University at the top. The ranking considers various factors such as faculty, infrastructure, and placement..."
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Tech Innovations Daily"
+            },
+            "author": "Alex Brown",
+            "title": "GNIOT Launches New AI and IoT Programs",
+            "description": "GNIOT announces new AI and IoT-based programs to cater to the growing demand for skilled professionals in emerging technologies.",
+            "url": "https://www.techinnovationsdaily.com/gniot-ai-iot-programs",
+            "urlToImage": "https://www.techinnovationsdaily.com/images/ai-iot-launch.jpg",
+            "publishedAt": "2024-09-10T08:30:00Z",
+            "content": "The Greater Noida Institute of Technology (GNIOT) is introducing new undergraduate and postgraduate programs in Artificial Intelligence and Internet of Things. These programs are designed to meet the demands of the tech industry..."
+        }
+    ]
+}

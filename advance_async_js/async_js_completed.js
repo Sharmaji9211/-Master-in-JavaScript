@@ -145,7 +145,7 @@ const age = ()=>{
 
 //concept of promise chaining
 
-//promise chaining a draw back to resolve it we new async and await note** one await replace by one then()
+//promise chaining a draw back to resolved  by  async and await note** one await replace by one then()
 
 // const A = (age) => {
 //     return new Promise((valid, invalid) => {
@@ -240,49 +240,89 @@ const checkAges = async () => {
 
 
 //6.fetch() API
-const fetchData = async () => {
-    try {
-        const response = await fetch('api.json'); // Fetch data from API
-        const data = await response.json();  // Convert response to JSON
+// const fetchData = async () => {
+//     try {
+//         const response = await fetch('api.json'); // Fetch data from API(It may be any json data or end-point like https://example.com/api/data)
+//         const data = await response.json();  // Convert response to JSON
 
-        const rootDiv = document.querySelector('.root');  // Select the root div
-        rootDiv.style.backgroundColor = 'white';  // Set the background color to black
+//         const rootDiv = document.querySelector('.root');  // Select the root div
+//         rootDiv.style.backgroundColor = 'white';  // Set the background color to black
 
-        data.forEach(user => {
-            // Create a user card container
-            const userCard = document.createElement('div');
-            userCard.classList.add('user-card');  // Add class for styling
+//         data.map(user => {
+//             // Create a user card container
+//             const userCard = document.createElement('div');
+//             userCard.classList.add('user-card');  // Add class for styling
 
-            // Add user data into the card
-            userCard.innerHTML = `
-                <h3>${user.name}</h3>
-                <p><strong>ID:</strong> ${user.id}</p>
-                <p><strong>Email:</strong> ${user.email}</p>
-                <p><strong>City:</strong> ${user.address.city}</p>
-                <p><strong>Street:</strong> ${user.address.street}</p>
-                <p><strong>Coordinates:</strong> Latitude ${user.address.geo.lat}, Longitude ${user.address.geo.lng}</p>
-            `;
+//             // Add user data into the card
+//             userCard.innerHTML = `
+//                 <h3>${user.name}</h3>
+//                 <p><strong>ID:</strong> ${user.id}</p>
+//                 <p><strong>Email:</strong> ${user.email}</p>
+//                 <p><strong>City:</strong> ${user.address.city}</p>
+//                 <p><strong>Street:</strong> ${user.address.street}</p>
 
-            // Create and append the remove button
-            const removeButton = document.createElement('button');
-            removeButton.textContent = 'Remove Card';
-            removeButton.classList.add('remove-btn');  // Add class for styling
+.//                 <p><strong>Coordinates:</strong> Latitude ${user.address.geo.lat}, Longitude ${user.address.geo.lng}</p>
+//             `;
 
-            // Add click event to the button to remove the card
-            removeButton.addEventListener('click', () => {
-                rootDiv.removeChild(userCard);
+//             // Create and append the remove button
+//             const removeButton = document.createElement('button');
+//             removeButton.textContent = 'Remove Card';
+//             removeButton.classList.add('remove-btn');  // Add class for styling
+
+//             // Add click event to the button to remove the card
+//             removeButton.addEventListener('click', () => {
+//                 rootDiv.removeChild(userCard);
+//             });
+
+//             // Append the button to the user card
+//             userCard.appendChild(removeButton);
+
+//             // Append the card to the root div
+//             rootDiv.appendChild(userCard);
+//         });
+
+//     } catch (error) {
+//         document.write('Error: ' + error);  // Handle and display any fetch errors
+//     }
+// };
+
+// fetchData();
+
+//promise with fetch
+
+
+const getData=()=>{
+    return new Promise((resolved,rejected)=>{
+            //calling your api
+            const respons=fetch('https://jsonplaceholder.org/posts');
+            document.write(respons);
+            respons.then((respons)=>{
+                if(respons.ok){
+                    resolved(respons);
+                }else{
+                    rejected("data failed to fetch");
+                }
+            });
+           
+    });
+}
+
+
+getData()
+    .then((resolved)=>{
+        const res= resolved.json();
+        return res;
+    })
+    
+    .then((data)=>{
+            //print your data on screen
+            console.log(data);
+            data.forEach(element => {
+                document.write(element.id+": "+element.slug +": "+element.url+"<br>");
             });
 
-            // Append the button to the user card
-            userCard.appendChild(removeButton);
-
-            // Append the card to the root div
-            rootDiv.appendChild(userCard);
-        });
-
-    } catch (error) {
-        document.write('Error: ' + error);  // Handle and display any fetch errors
-    }
-};
-
-fetchData();
+    })
+    .catch((rejected)=>{
+        document.write(rejected);
+    });
+//end
