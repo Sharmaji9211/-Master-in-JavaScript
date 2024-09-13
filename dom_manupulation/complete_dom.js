@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // // Defining CSS as a string
 // const My_CSS = `
 //     * {
@@ -237,3 +238,11 @@ main.appendChild(mainSection); // Add main section to the main content
 rootDiv.appendChild(footer); // Add footer to the root container
 
 
+=======
+const getDomContent=async ()=>{
+    const response=await fetch('dom-content-api.json');
+    const data=await response.json();
+    console.log(data);
+}
+getDomContent();
+>>>>>>> 6251fff75992d4e9248c27ee6179c63f329ae072
