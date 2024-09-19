@@ -373,7 +373,7 @@ function branches2() {
   ];
 
   // Using forEach to iterate through the array
-  array.forEach(object => {
+  array.forEach(object => {    // -----> forEach loop does not return any value and takes arrow fxn as parameter
       document.write(object.branch); // Print branch
       document.write("<br>"); // Add line break
       document.write(object.namee); // Print name
