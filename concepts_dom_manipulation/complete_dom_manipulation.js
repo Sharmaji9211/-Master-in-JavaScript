@@ -44,23 +44,62 @@ console.log(myList);
 // ------------------------Manipulating Content
 
 
-// Adding/removing text content: Methods for dynamically changing the text inside an element.
+// innerHTML vs textContent: innerHTML sets or retrieves HTML content inside an element, while textContent sets or retrieves text content only.
 mySingleLi.textContent=`<a href="#">LOGO</a>`;
 
-// innerHTML vs textContent: innerHTML sets or retrieves HTML content inside an element, while textContent sets or retrieves text content only.
-mySingleLi.innerHTML=`<a href="#">LOGO</a>`;
+// Adding/removing text content: Methods for dynamically changing the text inside an element.
+mySingleLi.innerHTML=mySingleLi.innerHTML.replace('LOGO','');//removing inner text
+mySingleLi.innerHTML=`<a href="#">TCA</a>`;//adding inner content
+mySingleLi.textContent='';//removing inner text
+mySingleLi.textContent+='[ TC';//adding inner content
+mySingleLi.textContent+='A ]';//adding inner content
 
 // Working with innerHTML, outerHTML: innerHTML allows setting or getting the HTML inside an element, while outerHTML includes the element itself.
+mySingleLi.innerHTML=`<a href="#">TCA</a>`;//adding inner content
+mySingleLi.outerHTML=`
+        <strong style="background-color:gold ;padding :5px; border-radius:50px; ">
+          <a id="logo" href="#HOME" >TCA</a>
+        </strong>`;//adding inner content
+
 
 // -----------------------Manipulating Styles
+
 
 // Inline styles: style property: Directly sets styles on an element using the style property.
 mySingleLi.style.backgroundColor="aliceblue";
 mySingleLi.style.color="red";
 mySingleLi.style.fontSize="28px";
 
+
 // Adding/removing CSS classes: classList property (add(), remove(), toggle(), contains()): Methods for dynamically adding, removing, toggling, and checking for CSS classes on an element.
-mySingleLi.classList.add('mySingleLi msl');              
+const bgChange = document.querySelector('span');
+const modeIcon = document.getElementById('mode');
+const myList1 = document.querySelector('.myList'); // Select the myList
+
+bgChange.id = "bg-changer"; // Adding id to the span
+bgChange.className = "bg-changer1"; // Adding class to span
+bgChange.classList.add("light"); // Start with light class
+
+// Function to toggle between dark and light classes
+modeIcon.onclick = function() {
+    if (bgChange.classList.contains("light")) {
+        bgChange.classList.remove("light");
+        bgChange.classList.add("dark");
+        document.body.style.backgroundColor = "black";
+        modeIcon.style.fill = "white"; // Change SVG color to white
+        myList1.style.backgroundColor = "gray"; // Change myList background color
+        myList1.style.color = "white"; // Change myList text color
+        myList1.querySelectorAll('a').forEach(link => link.style.color = "white"); // Change link color
+    } else {
+        bgChange.classList.remove("dark");
+        bgChange.classList.add("light");
+        document.body.style.backgroundColor = "white";
+        modeIcon.style.fill = "black"; // Change SVG color to black
+        myList1.style.backgroundColor = ""; // Reset myList background color
+        myList1.style.color = "black"; // Change myList text color
+        myList1.querySelectorAll('a').forEach(link => link.style.color = "black"); // Reset link color
+    }
+};
 
 // Handling computed styles: getComputedStyle(): Retrieves the actual computed styles applied to an element, as determined by the browser.
 
