@@ -185,7 +185,7 @@ mainSection.className = "mainSection"; // Set class for styling
 // Function to fetch news
 const fetchNews = async () => {
   try {
-    const response = await fetch('customApi/todayNews.json');
+    const response = await fetch('customApi-json_data/todayNews.json');
     if (response.ok) {
       return await response.json();
     } else {
@@ -210,7 +210,7 @@ const displayNewsByCategory = async (category) => {
       return `
         <div class="card">
         
-          <img src="${article.imageUrl ? article.imageUrl : 'customApi/img/default.jfif'}" alt="${article.title}" style="width:100%; height:auto;">
+          <img src="${article.imageUrl ? article.imageUrl : 'customApi-json_data/img/default.jfif'}" alt="${article.title}" style="width:100%; height:auto;">
                     
           <h3 style="color:blue">${article.title}</h3>
           <h5 style="color:gray"><strong>Description:</strong> ${article.description}</h5>
@@ -251,7 +251,7 @@ document.body.appendChild(mainSection);
 // Automatically display "LATEST News" when the page loads
 const fetchlatestNews= async()=>{
   try {
-   const response= await fetch('customApi/latestnews.json');
+   const response= await fetch('customApi-json_data/latestnews.json');
    if(response.ok){
      return await response.json();
    }
@@ -275,7 +275,7 @@ const fetchlatestNews= async()=>{
     return ` 
  <div class="card">
 
-   <img src="${myNews.imageUrl ? myNews.imageUrl : 'customApi/img/default.jfif' }" alt="${myNews.title}" style="width:100%; height:auto;">
+   <img src="${myNews.imageUrl ? myNews.imageUrl : 'customApi-json_data/img/default.jfif' }" alt="${myNews.title}" style="width:100%; height:auto;">
    <h3 style="color:blue">${myNews.title}:<h3 style="color:blue">${myNews.category}</h3></h3>
    <h5 style="color:gray"><strong>Description:</strong> ${myNews.description}</h5>
    <p>${myNews.content}</p>
