@@ -1,0 +1,20 @@
+{
+    "company": {
+        "name": "Tech Innovations",
+        "founded": "2012",
+        "mission": "To innovate and provide cutting-edge technology solutions to businesses worldwide.",
+        "description": "At Tech Innovations, we pride ourselves on our commitment to creating advanced technological solutions that simplify and enhance the daily lives of businesses and individuals alike. Founded in 2012, our company has rapidly grown into a leader in tech development and software solutions."
+    },
+    "team": [
+        {
+            "name": "Alice Johnson",
+            "position": "CEO",
+            "bio": "Alice has over 15 years of experience in tech management and is passionate about using technology to solve real-world problems."
+        },
+        {
+            "name": "Bob Smith",
+            "position": "CTO",
+            "bio": "Bob is a software engineer with a deep understanding of cloud architecture and artificial intelligence. He leads the tech team with a vision of innovation."
+        }
+    ]
+}

@@ -272,7 +272,7 @@ const fetchlatestNews= async()=>{
 
   const myLatestNewsHTML=dataL.news.map((myNews)=>{
     if (myNews) {
-    return` 
+    return ` 
  <div class="card">
 
    <img src="${myNews.imageUrl ? myNews.imageUrl : 'customApi/img/default.jfif' }" alt="${myNews.title}" style="width:100%; height:auto;">

@@ -261,7 +261,7 @@ const checkAges = async () => {
 //                 <p><strong>City:</strong> ${user.address.city}</p>
 //                 <p><strong>Street:</strong> ${user.address.street}</p>
 
-.//                 <p><strong>Coordinates:</strong> Latitude ${user.address.geo.lat}, Longitude ${user.address.geo.lng}</p>
+//                 <p><strong>Coordinates:</strong> Latitude ${user.address.geo.lat}, Longitude ${user.address.geo.lng}</p>
 //             `;
 
 //             // Create and append the remove button
