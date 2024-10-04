@@ -1,0 +1,36 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+.container{
+    text-align: center;
+
+}
+.container h2{
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.btn{
+background-color: transparent;
+padding: 10px;
+border: 2px solid red;
+margin-left: 20px;
+cursor: pointer;
+border-radius: 20px;
+outline: none;
+}
+.btn:hover{
+    background-color: brown;
+    color: antiquewhite;
+    transition: all 0.7s;
+}
+.color{
+    color: grey;
+}

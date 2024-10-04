@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Base</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+         .container{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+         }
+         li{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: rgb(8, 5, 173);
+            margin: 20px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 30px;
+            padding: 20px;
+            background-color: rgba(163, 155, 144, 0.158);
+         }
+        
+         span{
+            color: rgb(117, 117, 117);
+            font-size: 28px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border: 1px solid black;
+            border-radius: 30px;
+            padding: 20px;
+            background-color: white;
+         }
+         p{
+            border: 1px solid white;
+            border-radius: 30px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.829);
+            color: rgb(206, 206, 206);
+         }
+         p:hover{
+            transform: scale(1.1);
+            transition: all 0.7s;
+
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgb(116, 72, 173);
+         }
+         span:hover{
+            transform: scale(1.1);
+            transition: all 0.7s;
+
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgb(116, 72, 173);
+         }
+
+         li:hover{
+            transform: scale(0.9);
+            transition: all 0.7s;
+
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgb(116, 72, 173);
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <li class="div1">
+            <span id="fullstack">Full Stack Developer</span>
+            <hr>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex officia fugiat perferendis quidem voluptates distinctio.
+            </p>
+        </li>
+        <li class="div2">
+            <span id="mernstack">Mern Stack Developer</span>
+            <hr>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis laudantium deserunt eveniet. Modi, quibusdam pariatur!
+            </p>
+        </li>
+        <li class="div3">
+            <span id="meanstack">Mean Stack Developer</span>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo nulla repudiandae soluta, sequi accusamus ratione!
+            </p>
+        </li>
+        <li class="div4">
+            <span id="android">Android Developer</span>
+            <hr>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci beatae ipsam, eaque inventore delectus molestias.
+            </p>
+        </li>
+        <li class="div5">
+            <span id="da">Data Analytics</span>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis itaque quisquam animi quod, repellendus distinctio! 
+            </p>
+        </li>
+        <li class="div6" >
+            <span id="next" style="background-color: red; border-color: white;"><a href="https://youtube.com" target="_blank" style="color: white; text-decoration: none;">YouTube</a></span>
+           
+        </li>
+    </div>
+</body>
+<script src="event_Handling.js"></script>
+</html>
