@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // const xhr = new XMLHttpRequest();
+    // xhr.open('GET' ,"https://randomuser.me/api/");
+    // xhr.onreadystatechange= function(){
+    //      console.log(xhr.readyState);
+    //      if(xhr.readyState===4){
+    //          const data = JSON.parse(this.responseText);
+    //          console.log(typeof data);
+             
+    //          console.log(data.results);
+    //      }  
+    // }
+    // xhr.send();
+//     const promishOne= new Promise( function (resolve, reject){
+//         setTimeout(function(){
+//             console.log('Async task is compeleted');
+//             resolve();
+//         },1000)
+//     }) 
+
+//     promishOne.then(function(){
+//         console.log("Promised consumed");
+        
+//     })
+
+// new Promise(function(resolve, reject){
+//         setTimeout(function(){
+//             console.log("task 2");
+//             resolve();
+            
+//         },1000)
+//     }).then(function(){
+//         console.log("task 2 resloved ");
+        
+//     })
+
+    // const promishThree= new Promise( function( resolve , reject ){
+    //     setTimeout(function(){
+    //         let error = false
+    //         if(! error){
+    //             resolve({username: "shivam ", password: "12345"})
+    //         }
+    //         else{
+    //             reject("Error : Someting went worng")
+    //         }
+    //     },1000)
+    // })
+    // promishThree.then( (user )=>{
+    //     console.log(user);
+    //     return user.username
+    //  }).then((username)=>{
+    //         console.log(username);
+    //  }).catch((error)=>{
+    //     console.log(error);
+    // }).finally(()=> console.log("The promish is either resolved or rejected "))
+
+    // const promishFour= new Promise( function( resolve , reject ){
+    //     setTimeout(function(){
+    //         let error = false
+    //         if(!error){
+    //             resolve({username: "shivam ", password: "12345"})
+    //         }
+    //         else{
+    //             reject("Error : Someting went worng")
+    //         }
+    //     },1000)
+    // });  
+    // async function consumepromishFour() {
+    //   try {
+    //     const response = await promishFour  
+    //     console.log(response);  
+    //   } catch (error) {
+    //     console.log(error);
+    //   }    
+    // }
+
+    // // consumepromishFour()
+
+    // async function getAll() {
+    //     try {
+    //         const response = await fetch("https://randomuser.me/api/")
+    //          const data= await response.json()
+    //          console.log(data);
+    //         } catch (error) {
+    //         console.log("E:",error);
+    //     }
+    // }
+
+    // getAll();
+
+
+// fetch("https://randomuser.me/api/")
+// .then((response)=>{
+//       return response.json()
+// }).then((data)=>{
+// console.log(data);  
+// })
+// .catch((error)=> console.log("Error"))
+
+let myName = "hitesh   "
+let mychannel = "chai  "
+
+console.log(myName.tureLength);
+
+
+ 
+</script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body style="background-color:greenyellow">
+    <!-- <div class="bg-black">
+        <h1  id="title" class="heading" > Dom learning  on chai aur code </h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="Password" name=""   id=" ">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div> -->
+    <!-- <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div> -->
+    <!-- <ul class="lang">
+        <li>javascript</li>
+    </ul> -->
+
+
+<!-- <h2>Shivam Picture</h2>
+<div>
+    <ui id="image">
+        <li><img width="200px" id="Photoshop" src="./1000042898.jpg" alt="Shivam"></li>
+        <li><img width="200px" id="Shadi" src="./1000047317.jpg" alt="Deepak"></li>
+        <li><img width="200px" id="haldi" src="./1000047323.jpg" alt="Naveen"> </li>
+        <li><a href="https://google.com" id="google">Google</a> </li>
+    </ui>
+</div> -->
+
+
+<H1>chai aur code</H1>
+<button id="stop">stop</button>
+<button id="start">start</button>
+    <script src="app.js"></script>
+</body>
+ <script>
+    // let shivam=function(){
+    //     console.log("shivam");
+    // }
+    // const changText= function(){
+    //     document.querySelector('H1').innerHTML="Best college";
+    // }
+    //  const changeMe = setTimeout(shivam,2000)
+    //  document.querySelector('#stop').addEventListener('click',function(){
+    //     clearTimeout(changeMe);
+    //     console.log("Stoped");
+        
+    //  })
+    document.querySelector("#start").addEventListener('click',function(){
+        const Say=function(e){
+        console.log(e,Date.now());   
+    }
+    var
+    
+    
+     inter= setInterval(Say,1000,"hi");
+  
+    })
+  
+   
+        document.querySelector("#stop").addEventListener('click',function(){
+            clearInterval(inter);
+        });
+    
+    //  document.getElementById('Photoshop').onclick = function(){
+    //     alert("First pic clicked");
+    //  } 
+    // document.getElementById('Photoshop').addEventListener('click',function(e){
+    //       alert("First pic clicked");
+    //     console.log("pics click");
+    // } ,false)
+    // document.querySelector('.image').addEventListener('click',function(e){
+    //        alert("image pic clicked");
+    //     console.log("IMAGE click");
+    // },false)
+    // type,timestamp, defaultPRevented
+    // target , toElement , srcElement,currentTarget,
+    //clintX, clintY,sreenX,sceenY
+    // document.getElementById('image').addEventListener('click',function(e){
+    //       alert("clicked")
+    //         console.log("pics click");
+
+            
+    // });
+    //  document.querySelector('#image').addEventListener('click',function(e){
+    //     console.log(e.target.tagName);
+    //     if(e.target.tagName==='IMG'){
+    //         let removeIt =e.target.parentNode
+    //         removeIt.remove();
+    //     }
+        
+        
+    //  })
+     
+    
+ </script>
+</html>
