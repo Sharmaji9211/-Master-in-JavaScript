@@ -856,24 +856,29 @@ webApp.Website();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 //2. Advanced Asynchronus javascript:
+//Callbacks,
+//setTimeOut(),
+//setInterval,
+//Promises((resolve,reject)=>{}),
+//.then().catch().finally(),
+//async await, fetch(),
+//Axios,
+//AJAX
 
+//3. Api handling done 
+//fetch()->
+//get,
+//post,
+//put,
+//delete,
+//patch,
+//option
 
-//3. Apihandling
-
-//4. project
+//4. project done 
+//news website,
+//client management system,
+//Openthought
 
 
 
